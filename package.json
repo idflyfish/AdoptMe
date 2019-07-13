@@ -21,8 +21,12 @@
   },
   "homepage": "https://github.com/idflyfish/AdoptMe#readme",
   "devDependencies": {
+    "babel-eslint": "^10.0.2",
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
     "prettier": "^1.18.2"
   },
   "dependencies": {
