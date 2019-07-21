@@ -7,14 +7,8 @@ import ErrorBoundary from "./ErrorBoundary";
 import ThemeContext from "./ThemeContext";
 
 class Details extends React.Component {
-  constructor(props) {
-    super(props);
+  state = { loading: true, showModal: false };
 
-    this.state = {
-      loading: true,
-      showModal: false
-    };
-  }
   componentDidMount() {
     pet.animal(this.props.id).then(({ animal }) => {
       this.setState({
@@ -31,13 +25,13 @@ class Details extends React.Component {
     }, console.error);
   }
 
-  toggleModal() {
-    this.setState({ showModal: !this.state.showMOdal });
-  }
+  toggleModal = () => {
+    this.setState({ showModal: !this.state.showModal });
+  };
 
-  adopt() {
+  adopt = () => {
     navigate(this.state.url);
-  }
+  };
 
   render() {
     if (this.state.loading) {
